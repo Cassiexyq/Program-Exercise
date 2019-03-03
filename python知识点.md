@@ -6,10 +6,13 @@
   <pre><code> concatenate((a,b),axix=1) </pre></code>
   vstack()是把第二个拼在第一个后面，垂直组合，等同于
   <pre><code> concentrate((a,b),axix=0) </pre></code>
-  ，要注意这个数组是同维度的，即等行等列
+  要注意这个数组是同维度的，即等行等列
   vstack()和平常两个数组的append()是相同的，如果对两个长度不一样的进行拼接，用np.array()
  
 * 排序：sort()和sorted(),sort()是在原位重新排序列表，只应用再list上，sorted()是生成一个新的列表,
  key的效率高于cmp(因为key只调用一次，而cmp调用多次)，能用在所有可迭代对象上
- <pre><code>sorted(arr, key: lambda x: x[1]  # 根据第二个排序 
- sorted(arr, cmp = lambda x,y: cmp(x[1],y[1])) # 根据第二个排序 </pre></code>
+  <pre><code>sorted(arr, key: lambda x: x[1]  # 根据第二个排序 
+  sorted(arr, cmp = lambda x,y: cmp(x[1],y[1])) # 根据第二个排序 </pre></code>
+* itertools模块：[博客](http://www.wklken.me/posts/2013/08/20/python-extra-itertools.html)
+ [博客](http://funhacks.net/2017/02/13/itertools/)
+  很强大，很高效 [具体参见代码使用](https://github.com/Cassiexyq/Program-Exercise/tree/master/SEOJ/%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8)
