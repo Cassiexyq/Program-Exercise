@@ -33,3 +33,21 @@
   * 匹配中文[\u4e00-\u9fa5]，匹配空格\s，匹配数组\d
   * 对一个字符串某个特点字符的查找，<code>str.find()</code>返回这个字串出现的起始位置
 
+* 替换函数：
+  * strip():这不是真正意义上的字符串，可以删除位于首位的字符
+  * 对象.replace(rgExp, replceText, max): 前两个都一定要有，max可选，rgExp表示是string对象；replaceText就是一个string对象；max是一个数字，表示对象里面每一个rgExp都替换成replaceText,从左至右最多max次， replace不能用正则
+  * re.sub(pattern,repl,string,count,flags):前三个必选，后两个可选，pattern表示正则表达式的模式字符串，repl是被替换的字符串，string是要被处理的原字符串，count是匹配的次数
+
+* reduce(function, iterable[, initializer])函数：对参数序列元素进行累积如<code>reduce(add, [1,2,3,4,5])</code> 
+
+  ​	<code>reduce(lambda x,y: x+y, [1,2,3,4,5])</code>
+
+* eval()函数：<code>x = 7 
+
+   eval('3 * x')  # 21
+
+  eval('pow(2,2)') # 4 
+
+  </code>
+
+* 
