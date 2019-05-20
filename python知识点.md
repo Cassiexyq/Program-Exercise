@@ -44,10 +44,12 @@
 
 * eval()函数：<code>x = 7 
 
-   eval('3 * x')  # 21
+  eval('3 * x')  # 21
 
   eval('pow(2,2)') # 4 
 
   </code>
 
-* 
+* 用python导出数据库数据到csv加入表头信息，用sql查询得不到表头，所以插入的信息就只是每行数据，一般用csv.writer(f, dialect='excel')获得，这样就没有表头了，所以自己加一条write.writerow当作一行数据写进csv，一般如果是自己定义的数据，就可以用字典数组，用csv,DictWriter()，这就可以加表头
+
+* 报错：expected string or bytes-like object ，出现在正则表达式，主要意思是数据类型不匹配，也就是说<code> re.findall(r'正则', sentence)</code>，其中的sentence必须是str刑，可以加str()就行了。
