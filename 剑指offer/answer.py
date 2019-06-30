@@ -10,6 +10,37 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+def FindKthToTail(head, k):
+    res = []
+    while head:
+        res.append(head.val)
+        head = head.next
+    if k > len(res) or k < 1: return 0
+    return res[-k]
+def ReverseList(pHead):
+    q = pHead.next
+    p = pHead
+    p.next = None
+    while(q):
+        r = q.next
+        q.next = p
+        p = q
+        q = r
+def Merge(pHead1, pHead2):
+    i = pHead1
+    j = pHead2
+    pre = None
+    while i or j:
+        while i.val < j.val:
+            pre = i
+            i = i.next
+        temp = j
+        temp.next = i
+        j = j.next
+        pre.next = temp
+    if j:
+        i.next = j
+    return pHead1
 
 def printListFromTailToHead(listNode):
     stack = []
@@ -29,7 +60,7 @@ class TreeNode:
         self.right = None
 
 def reConstructBinaryTree(pre, tin):
-    if not pre or not tin: return None
+    if not pre or not tin: return
     root = TreeNode(pre.pop(0))
     index = tin.index(root.val)
     print(root.val)
@@ -102,4 +133,35 @@ def Power(base, exponent):
         base *= base
         p = p >> 1
     return res if exponent>0 else 1/res
-print(Power(1.2,2))
+def reOrderArray1(array):
+    js = []
+    os = []
+    for i in array:
+        if i %2 ==0:
+          os.append(i)
+        else: js.append(i)
+    return js + os
+def reOrderArray(array):
+    for i in array:
+        if i % 2 == 0:
+            array.append(i)
+            array.pop(array.index(i))
+    return array
+
+def printMatrix(matrix):
+     if len(matrix) == 1: return matrix[0]
+     if len(matrix[0]) == 1: return [i[0] for i in matrix]
+     res = []
+     while 1:
+        res.extend(matrix.pop(0))
+        if len(matrix) ==1 and len(matrix[0]) == 1:
+            res.extend(matrix[0])
+            return res
+        matrix = list(map(list,zip(*matrix)))[::-1]
+
+
+import numpy as np
+matrix = [[1,2],[2,3]]
+
+print(printMatrix(matrix))
+# print(len(matrix[0]) * len(matrix))
