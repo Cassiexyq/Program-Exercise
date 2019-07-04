@@ -1,0 +1,31 @@
+#include<deque>
+class Solution {
+public:
+    /**
+     * @param nums: A list of integers.
+     * @param k: An integer
+     * @return: The maximum number inside the window at each moving.
+     */
+    vector<int> maxSlidingWindow(vector<int> &nums, int k) {
+        // write your code here
+        vector<int> res;
+        deque<int> index;
+        int size = nums.size();
+        if (k > size) return res;
+        for (int i = 0; i< k;i++){
+            while(!index.empty() && nums[i] >= nums[index.back()])
+                index.pop_back();
+            index.push_back(i);
+        }
+        for(int i = k; i < size; i++){
+            res.push_back(nums[index.front()]);
+            while(!index.empty() && nums[i] >= nums[index.back()])
+                index.pop_back();
+            while(!index.empty() && index.front() <= i-k)
+                index.pop_front();
+            index.push_back(i);
+        }
+        res.push_back(nums[index.front()]);
+        return res;
+    }
+};
