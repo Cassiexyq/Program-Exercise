@@ -257,7 +257,25 @@
     # [3 2 1]]
     ```
 
-    
+
+* np.random
+
+  ```python
+  np.random.rand(4,2) # 根据维度生成[0,1)之间的4维2列的矩阵
+  np.random.randn(4,2) #同样生成但具有标准正太分布标准正态分布又称为u分布，是以0为均值、以1为标准差的正态分布，记为N（0，1
+  np,random.randint(-5，5，size=(2,2))
+  array([[ 2, -1],
+         [ 2,  0]])
+  np.random.randint(1,5) # 返回1个[1,5)之间的随机整数
+  #返回随机整数，范围区间为[low,high），包含low，不包含high
+  #参数：low为最小值，high为最大值，size为数组维度大小，dtype为数据类型，默认的数据类型是np.int
+  #high没有填写时，默认生成随机数的范围是[0，low)
+  np.random.choice(5,3, replace=False) 
+  # array([0,3,1]) replace=False表示不重复
+  #从给定的一维数组中生成随机数
+  #参数： a为一维数组类似数据或整数；size为数组维度；p为数组中的数据出现的概率
+  #a为整数时，对应的一维数组为np.arange(a)
+  ```
 
   
 
