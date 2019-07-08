@@ -9,5 +9,5 @@ class TreeNode:
 class Solution:
     def TreeDepth(self, pRoot):
         if pRoot == None: return 0
-        return max(self.TreeDepth(pRoot.left), self.TreeDepth(pRoot.right))
+        return max(1+self.TreeDepth(pRoot.left), 1+self.TreeDepth(pRoot.right))
 
