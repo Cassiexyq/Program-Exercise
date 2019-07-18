@@ -1,4 +1,4 @@
-### python知识点
+## Python -note
 
 * global用法：定义全局变量，使放在函数块中的变量在函数块外也能调用
 
@@ -21,6 +21,8 @@
   很强大，很高效 [具体参见代码使用](https://github.com/Cassiexyq/Program-Exercise/blob/master/SEOJ/%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/itertools.py)
 
 * 正则表达式：
+
+  查看返回匹配满足正则表达式的多个子串，返回替换满足正则表达式后的子串的字符串，返回是否有满足正则表达式的子串，返回整个字符串是否满足正则表达式
 
   * <code>re.compile(r'正则表达式').findall(src，pos,endpos)</code> 在src中查找是否有符合该正则表达式的字串
 
@@ -277,7 +279,31 @@
   #a为整数时，对应的一维数组为np.arange(a)
   ```
 
+* asis
+
+  ```python
+  np.mean(X, axis = 0) 输出矩阵为1行（按列平均）
+  np.mean(X, axis = 1) 输出矩阵为1列（按行平均）
+  ```
+
   
+
+* subplot函数
+
+  ```python
+  # 绘制子图
+  subplot(numRows, numCols, plotNum)
+  # 一行放3个 131 132 133
+  # 一行放2个 121 122
+  # 不规则划分 上面放两个，下面放1个 2×2划分
+  # 221 222 212
+  ```
+
+  第一个数表示有多少行。第二个数表示这一行有多少列
+
+  第三个数占用 了（223）（224） 需要重新划分整体按照 2×1划分，上一行211下一行 212
+
+
 
 
 
