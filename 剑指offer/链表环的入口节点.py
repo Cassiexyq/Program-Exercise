@@ -8,19 +8,29 @@ class ListNode:
         self.next = None
 class Solution:
     def EntryNodeOfLoop(self, pHead):
-        if pHead == None or pHead.next == None:
-            return None
-        slow = pHead
-        fast = pHead
-        while slow != None and slow.next != None:
+
+        slow,fast = pHead, pHead
+        while fast and fast.next:
             slow = slow.next
-            fast = slow.next.next
+            fast = fast.next.next
             if slow == fast:
-                fast = pHead
-                while slow != fast:
-                    slow = slow.next
-                    fast = fast.next
-                if slow == fast:
-                    return slow
+                break
+        if slow == fast:
+            fast = pHead
+            while fast != slow:
+                fast = fast.next
+                slow = slow.next
+            return slow
 
         return None
+
+s1 = ListNode(1)
+s2 = ListNode(2)
+s3 = ListNode(3)
+s4 = ListNode(4)
+s1.next = s2
+s2.next = s3
+s3.next = s2
+s = Solution()
+res = s.EntryNodeOfLoop(s1)
+print(res.val)
