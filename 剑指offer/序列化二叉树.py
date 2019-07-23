@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 前序遍历
 class TreeNode:
     def __init__(self, x):
         self.val = x

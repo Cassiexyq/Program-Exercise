@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 递归和非递归  左子树的左子树和右子树的右子树一样，左子树的右子树和右子树的左子树一样
 class TreeNode:
     def __init__(self, x):
         self.val = x

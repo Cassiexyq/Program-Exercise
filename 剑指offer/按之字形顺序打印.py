@@ -3,7 +3,7 @@
 # @Author: xyq
 
 
-
+# 用reserved和不用，前者用一个队列，后者用两个栈
 class TreeNode:
     def __init__(self, x):
         self.val = x
