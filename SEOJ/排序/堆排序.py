@@ -33,5 +33,5 @@ def heapSort(L):
     return [L[i] for i in range(1, len(L))]
 
 if __name__ == "__main__":
-    L = [0, 50, 16, 30, 10, 60,  90,  2, 80, 70]
+    L = [3,5,38,15,36,26,27,2,44,4]
     print(heapSort(L))

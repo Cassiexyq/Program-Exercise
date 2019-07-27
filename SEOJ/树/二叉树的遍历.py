@@ -2,7 +2,7 @@
 
 # @Author: xyq
 
-
+from collections import deque
 
 class TreeNode:
     def __init__(self, x):
@@ -41,6 +41,17 @@ class Solution:
                 stack.append(pRoot)
                 pRoot = pRoot.left
             pRoot = stack.pop(-1)
+            pRoot = pRoot.right
+        return res
+    def xx(self, pRoot):
+        stack = deque()
+        res = []
+        while pRoot or stack:
+            while pRoot:
+                res.append(pRoot.val)
+                stack.append(pRoot)
+                pRoot = pRoot.left
+            pRoot = stack.pop()
             pRoot = pRoot.right
         return res
     def zhongxu2(self,pRoot):
@@ -89,9 +100,10 @@ s = Solution()
 s.xianxu(s1)
 print(s.res1)
 print(s.xianxu2(s1))
-s.zhongxu(s1)
-print(s.res2)
-print(s.zhongxu2(s1))
-s.houxu(s1)
-print(s.res3)
-print(s.houxun2(s1))
+print(s.xx(s1))
+# s.zhongxu(s1)
+# print(s.res2)
+# print(s.zhongxu2(s1))
+# s.houxu(s1)
+# print(s.res3)
+# print(s.houxun2(s1))

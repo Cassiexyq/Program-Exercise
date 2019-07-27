@@ -303,7 +303,14 @@
 
   第三个数占用 了（223）（224） 需要重新划分整体按照 2×1划分，上一行211下一行 212
 
+* Numpy
 
+  ```python
+  x_norm=np.linalg.norm(x, ord=None, axis=None, keepdims=False) #求范数 默认是L2范数，ord =1是L1
+  np.nozero(a) # 返回数组a中值不为0 的元素的下标的远足
+  ```
+
+  
 
 
 
