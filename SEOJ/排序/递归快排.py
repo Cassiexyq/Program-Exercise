@@ -70,8 +70,8 @@ def quicksort(L,s,e):
         while i < j and pivot >= L[i]:
             i = i+1
         L[j] = L[i]
-    L[i] = pivot
-    quicksort(L, s,i-1)
+    L[j] = pivot
+    quicksort(L, s, i-1)
     quicksort(L, i+1, e)
     return L
 

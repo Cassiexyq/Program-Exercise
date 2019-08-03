@@ -34,10 +34,6 @@ public:
 		return a;
 	}
 
-	boolean check(int[][] array){
-		if (array.length == 2):
-			
-	}
 
 };
 int main(){
