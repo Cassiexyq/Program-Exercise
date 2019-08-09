@@ -80,4 +80,31 @@ a ^b是没有考虑进位的情况下的两数和
    [2, 3, 4]
    ```
 
-   
+**二分查找**
+
+python 列表相当于是一个线性表，在列表中查找元素适用list.index()方法，时间复杂度O(N)
+
+对于大数据量，可以使用二分查找，要求对象必须有序
+
+python中有一个bisect 模块，用于维护有序列表，实现了用于插入元素到有序列表，不需要每次调用sort方式维护有序列表
+
+Bisect模块提供的函数有：
+
+- **bisect.bisect_left(a,x, lo=0, hi=len(a)) :**
+
+查找在有序列表 a 中插入 x 的index。lo 和 hi 用于指定列表的区间，默认是使用整个列表。如果 x 已经存在，在其左边插入。返回值为 index。
+
+- **bisect.bisect_right(a,x, lo=0, hi=len(a))**
+- **bisect.bisect(a, x,lo=0, hi=len(a)) ：**
+
+这2个函数和 bisect_left 类似，但如果 x 已经存在，在其右边插入。
+
+- **bisect.insort_left(a,x, lo=0, hi=len(a)) ：**
+
+在有序列表 a 中插入 x。和 a.insert(bisect.bisect_left(a,x, lo, hi), x) 的效果相同。
+
+- **bisect.insort_right(a,x, lo=0, hi=len(a))**
+- **bisect.insort(a, x,lo=0, hi=len(a)) :**
+
+和 insort_left 类似，但如果 x 已经存在，在其右边插入。
+

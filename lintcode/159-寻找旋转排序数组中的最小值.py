@@ -15,26 +15,9 @@ class Solution:
     @param nums: a rotated sorted array
     @return: the minimum number in the array
     """
+
+
     def findMin(self, nums):
-        # write your code here
-        if len(nums) == 1 or nums[-1] > nums[0]:
-            return nums[0]
-        if len(nums) == 0:
-            return -1
-        l,h = 0,len(nums)-1
-        while l < h:
-            mid = (l+h)//2
-            if nums[mid] >= nums[l]:
-                l = mid
-            else:
-            # elif nums[mid] < nums[l]:
-                h = mid
-            # else:
-            #     break
-        return nums[h]
-
-
-    def findMin2(self, nums):
 
         length = len(nums)
         if length == 1:
@@ -44,21 +27,19 @@ class Solution:
                 return nums[0]
             else:
                 left, right = 0, length - 1
-                while left < right:
+                while right-left > 1:
                     mid = (left + right) // 2
-                    if nums[mid] > nums[left]:
+                    if nums[mid] >= nums[left]:
                         left = mid
-                    elif nums[mid] < nums[left]:
+                    else:
                         right = mid
-                    else:  # mid和left相等时
-                        break
             return nums[right]
 
 
 if __name__ == "__main__":
     s = Solution()
+    # print(s.findMin([4,5,6,7,1,2,3]))
+    # print(s.findMin([2,1]))
+    print(s.findMin([4,5,6,7,0,1,2]))
     print(s.findMin([4,5,6,7,1,2,3]))
     print(s.findMin([2,1]))
-    print(s.findMin2([4,5,6,7,0,1,2]))
-    print(s.findMin2([4,5,6,7,1,2,3]))
-    print(s.findMin2([2,1]))
