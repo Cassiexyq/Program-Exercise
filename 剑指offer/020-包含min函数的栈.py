@@ -30,3 +30,12 @@ class Solution:
     def min(self):
         if self.assist:
             return self.assist[-1]
+
+
+import random
+a = random.randint(0,2)
+print(a)
+b = random.randint(0,1)  # 包括右边
+print(b)
+c = random.randrange(2,3)  # 不包括右边
+print(c)
