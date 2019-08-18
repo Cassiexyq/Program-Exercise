@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 动态规划
 class Solution:
     def FindGreatestSumOfSubArray(self, array):
         res = [array[0]]

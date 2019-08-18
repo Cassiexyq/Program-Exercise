@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
+# 把数组中所有数字拼接起来排成一个数，打印能拼接出所有数字中最小的一个
+
 from functools import cmp_to_key
 class Solution:
     def compare(self,num1, num2):

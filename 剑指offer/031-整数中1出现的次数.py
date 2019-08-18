@@ -27,7 +27,7 @@ class Solution:
         while m <= n:
             a = int(n / m)
             b = n % m
-            cnt += int((a+8) /10) * m + (a % 10 == 1) * (b+1)
+            cnt += ((a+8) // 10) * m + (a % 10 == 1) * (b+1)
             m *= 10
         return cnt
 

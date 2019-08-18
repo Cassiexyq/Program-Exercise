@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
+# 找出数组中数字数显次数超过数组长度的一般的数字
 from collections import defaultdict
 class Solution:
     def MoreThanHalfNum_Solution(self, numbers):

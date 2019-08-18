@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 路径的定义是从树的根节点开始到叶节点所经过的路径
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -11,7 +11,7 @@ class Solution:
     def __init__(self):
         self.path = []
         self.res = []
-    # 返回二维列表，内部每个列表表示找到的路径
+    # 返回二维列表，内部每个列表表示找到的路径，dfs
     def FindPath(self, root, expectNumber):
         if root == None: return []
         self.path.append(root.val)

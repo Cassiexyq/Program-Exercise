@@ -2,7 +2,7 @@
 
 # @Author: xyq
 
-
+# 快排排序
 class Solution:
     def GetLeastNumbers_Solution(self, tinput, k):
         def quick_sort(lst):

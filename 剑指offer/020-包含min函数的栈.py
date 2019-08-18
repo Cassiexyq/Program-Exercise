@@ -2,7 +2,7 @@
 
 # @Author: xyq
 
-
+# 记录的是每次push一个元素就记录当前的最小元素值
 
 class Solution:
 

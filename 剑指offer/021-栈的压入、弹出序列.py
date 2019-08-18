@@ -2,7 +2,7 @@
 
 # @Author: xyq
 
-
+# 判断弹出队列是否有效
 
 class Solution:
     def IsPopOrder(self, pushV, popV):
@@ -11,7 +11,7 @@ class Solution:
         index = 0
         for i in range(len(pushV)):
             stack.append(pushV[i])
-            while len(stack) !=0 and stack[-1] == popV[index]:
+            while len(stack) != 0 and stack[-1] == popV[index]:
                 stack.pop()
                 index += 1
 

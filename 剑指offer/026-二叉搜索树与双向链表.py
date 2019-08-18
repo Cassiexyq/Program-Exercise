@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 将二叉搜索树转换成一个排序的双向链表，要求不能创建任何新的结点，智能调整结点指针的指向
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -25,4 +25,24 @@ class Solution:
             self.res = pRootOfTree
         self.Convert(pRootOfTree.right)
         return self.head
+    def convert2(self,pRoot):
+        if not pRoot: return None
+        stack = []
+        p = pRoot
+        new_h = None
+        pre = None
+        while p or stack:
+            while p:
+                stack.append(p)
+                p = p.left
+            p = stack.pop()
+            if not pre:
+                pre = p
+                new_h = p
+            else:
+                pre.right = p
+                p.left = pre
+                pre = p
+            p = p.right
+        return new_h
 

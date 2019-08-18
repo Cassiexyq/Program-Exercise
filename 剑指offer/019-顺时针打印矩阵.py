@@ -34,13 +34,13 @@ def printMatrix(matrix):
                 dir = 2
                 j -= 1
         elif dir == 2:
-            if j > 0 and not visited[i][j-1]:
+            if j >= 0 and not visited[i][j-1]:
                 j -= 1
             else:
                 dir = 3
                 i -= 1
         elif dir == 3:
-            if i > 0 and not visited[i-1][j]:
+            if i >= 0 and not visited[i-1][j]:
                 i -= 1
             else:
                 dir = 0

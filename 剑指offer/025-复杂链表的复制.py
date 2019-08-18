@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
+# 输入一个复杂链表（每个节点中有节点值，以及两个指针，
+# 一个指向下一个节点，另一个特殊指针指向任意一个节点），
+# 返回结果为复制后复杂链表的head。
+# （注意，输出结果中请不要返回参数中的节点引用，否则判题程序会直接返回空）
 
+# 不借助O（n）的空间，老新链表交叉存储，奇数存老链表。偶数存新链表
 class RandomListNode:
     def __init__(self, x):
         self.label = x
@@ -15,17 +20,11 @@ class Solution:
         while dummy:
             dummynext = dummy.next
             copynode = RandomListNode(dummy.label)
+            if dummy.random:
+                copynode.random = dummy.random
             copynode.next = dummynext
-            dummy.next =copynode
+            dummy.next = copynode
             dummy = dummynext
-
-        dummy = pHead
-        while dummy:
-            dummyrandom = dummy.random
-            copynode = dummy.next
-            if dummyrandom:
-                copynode.random = dummyrandom
-            dummy = copynode.next
 
         dummy = pHead
         copyHead = dummy.next
