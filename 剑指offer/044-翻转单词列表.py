@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 考虑用栈存储，然后弹出
 class Solution:
     def ReverseSentence(self, s):
 

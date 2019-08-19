@@ -2,7 +2,7 @@
 
 # @Author: xyq
 
-
+# 递增序列中找到两个数的和为s，有多组返回乘积最小的
 class Solution:
     def FindNumbersWithSum(self, array, tsum):
         if len(array) == 0: return []

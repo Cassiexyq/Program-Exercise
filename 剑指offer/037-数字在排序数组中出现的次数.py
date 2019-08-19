@@ -2,7 +2,7 @@
 
 # @Author: xyq
 
-
+# 二分法
 
 class Solution:
     def __init__(self):
@@ -23,7 +23,7 @@ class Solution:
             if self.data[mid] < self.k:
                 start = mid+1
             else:
-                end = mid - 1
+                end = mid
         return start
 
     def getUpper(self):
@@ -33,7 +33,7 @@ class Solution:
         while start <= end:
             mid = int((start + end) / 2)
             if self.data[mid] <= self.k:
-                start = mid + 1
+                start = mid
             else: end= mid -1
         return end
 

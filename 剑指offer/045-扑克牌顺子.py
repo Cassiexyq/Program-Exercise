@@ -2,6 +2,7 @@
 
 # @Author: xyq
 
+# 排序 + 计算顺差（下一张牌和上一张牌差的值是多少）
 class Solution:
     def IsContinuous(self, numbers):
         if len(numbers) < 5: return False

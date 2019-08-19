@@ -36,13 +36,13 @@ class Solution:
         return res
     def stackprint(self, pRoot):
         if not pRoot: return None
-        stack1 = []
-        stack2 = []
+        stack1 = []  # 逆序，弹出来的就是顺序
+        stack2 = []  # 顺序 打出来就是逆序
         res = []
 
         stack1.append(pRoot)
         while len(stack1) != 0 or len(stack2) != 0:
-            if len(stack1) != 0:
+            if len(stack1) != 0: # 从左往右打印
                 val = []
                 while len(stack1) !=0 and len(stack2) == 0:
                     temp = stack1.pop(-1)

@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-'''
-
-'''
 
 class Solution:
     # s, pattern都是字符串

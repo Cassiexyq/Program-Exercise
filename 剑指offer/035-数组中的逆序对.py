@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 归并排序计算逆序对，在合并排序中，如果left > right，要计算逆序对，
+# 即对当前right[j]一共有的逆序对个数是 len(left)-i，
+# 也就是当前left 的i指针后面那些都要比这个right[j]来的大
 class Solution:
     def __init__(self):
         self.cn = None

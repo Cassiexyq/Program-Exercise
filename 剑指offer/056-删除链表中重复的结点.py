@@ -3,6 +3,7 @@
 # @Author: xyq
 
 # 排序的链表，存在重复结点，去掉重复点
+# 1-2-3-3-4-4-5  -》   1-2-5
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -24,7 +25,7 @@ class Solution:
         q = pHead
         p = head
         while q:
-            while q and q.next and q.next.val == q.val:
+            while q and q.next and q.next.val == q.val:  # 出现多个数的连续重复
                 temp = q.val
                 while q and q.val == temp:
                     q = q.next
