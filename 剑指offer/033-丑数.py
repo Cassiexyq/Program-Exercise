@@ -14,7 +14,8 @@ class Solution:
             if k[i] == k[t2] * 2: t2+=1
             if k[i] == k[t3] * 3: t3+=1
             if k[i] == k[t5] * 5: t5+=1
-        return k[-1]
+        # print(k)
+        return k[index-1]
 
 
-print(Solution().GetUglyNumber_Solution(200))
+print(Solution().GetUglyNumber_Solution(6))
