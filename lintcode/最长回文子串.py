@@ -27,4 +27,4 @@ class Solution:
         return j - i -1
 
 s = Solution()
-print(s.longestPalindrome("abcdzdcab"))
+print(s.longestPalindrome("cbbd"))

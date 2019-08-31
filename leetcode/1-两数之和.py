@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # @Author: xyq
-
+# 求两数之和，用哈希存储所有的值，计算target-这个数得到的值是否在哈希表里
 def solution(nums,target):
     hashmap = {}
     for id, num in enumerate(nums):
