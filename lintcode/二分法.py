@@ -79,11 +79,8 @@ def binary_search222(arr,target):
 
 if __name__ == "__main__":
 
-    print(binary_search0([1,2,3,4,5,6,7],7))
-    print(binary_search00([1,2,4,5,6,8,9],9))
-
-    print(binary_search2([1,1,1,2,2,3,4,5],3))
-    print(binary_search2([1,2,2,3,3,5,5],6))
-    print(binary_search2([1,2,2,3,3,3,4],2))
+    print(binary_search1([1,3,5,7,9],10))
+    print(binary_search1([1,3,5,7,9],1))
+    print(binary_search1([1,2,2,3,3,3,4],2))
 
 
