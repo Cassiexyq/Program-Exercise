@@ -2,34 +2,31 @@
 
 # @Author: xyq
 
-class Solution:
-    def __init__(self):
-        self.maxl = 1000
-        self.dx = [-1,1,0,0]
-        self.dy = [0,0,-1,1]
-
-    def dfs(self,x,y,cur):
-        if x == r and y == c:
-            if cur < self.maxl:
-                self.maxl = cur
-            return
-        for i in range(4):
-            xx = x + self.dx[i]
-            yy = y + self.dy[i]
-            if 0 <= xx < len(res) and 0 <=  yy < len(res[0]) and res[xx][yy] and not f[xx][yy]:
-                f[xx][yy] = 1
-                self.dfs(xx,yy,cur+1)
-                f[xx][yy] = 0
-
-
+# 有障碍物不能走，从起点（0，0）到给定的终点最少的步数
 r,c,n = list(map(int, input().split()))
-r,c = r + 500, c + 500
-res = [[1] * 1000 for _ in range(1000)]
-f = [[0]*1000 for _ in range(1000)]
+matrix = {}
 for _ in range(n):
     a,b = list(map(int, input().split()))
-    res[a+500][b+500] = 0
-f[500][500] = 1
-s = Solution()
-s.dfs(500,500,0)
-print(s.maxl)
+    matrix[(a,b)] = 1
+visited = {}
+def bfs():
+    from collections import deque
+    que = deque([(0,0)])
+    visited[(0,0)] = 1
+    cnt = 0
+    while que:
+        temp = deque()
+        while que:
+            cur = que.popleft()
+            for a,b in [[0,1],[1,0],[-1,0],[0,-1]]:
+                nxt = (cur[0]+a,cur[1]+b)
+                if nxt[0] == r and nxt[1] == c:
+                    return cnt + 1
+                if nxt not in visited and nxt not in matrix:
+                    visited[nxt] = 1
+                    temp.append(nxt)
+        que = temp
+        cnt += 1
+print(bfs())
+
+
